@@ -1,7 +1,7 @@
 # Team5_board
-+ + + + + + + + + + + + + + +
-+ + + + Basic Game + + + +
-+ + + + + + + + + + + + + + +
+__________________________
+_ _ _ _ Basic Game _ _ _ _
+__________________________
 
 The game would feature Asymmetric Gameplay
 
