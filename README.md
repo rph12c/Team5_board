@@ -21,9 +21,9 @@ AP’s Goal is to use their troops to secure a route from the bottom of the boar
 
 DP’s Goal is to prevent AP from winning for a certain number of turns
 
-+ + + + + + + + + + + + + + + + +
-+ + + + Board Specifics + + + +
-+ + + + + + + + + + + + + + + + +
+__________________________
+_ _ _ _ Board Specifics _ _ _ _
+__________________________
 
 The board takes place in a Circular town with an entry to the north and south
 
@@ -39,9 +39,9 @@ The Side routes take longer and cannot be used as a secured route
 
 The rest of the town is a maze of Nodes and lanes, joining and splitting at Nodes along the way
 
-+ + + + + + + + + + + + + + +
-+ + + + DP Specifics + + + +
-+ + + + + + + + + + + + + + +
+__________________________
+_ _ _ _ Player 1, DP Specifics _ _ _ _
+__________________________
 
 DP has the most control pre-game; having direct control over what units they command and the ability to affect the layout of the board.
 
@@ -59,9 +59,9 @@ The DP’s Units should be hardy and take more than one attempt to remove them f
 
 (Idea: AP cannot see what characters DP has chosen until AP’s troops have landed on one, and only know that one)
 
-+ + + + + + + + + + + + + + +
-+ + + + AP Specifics + + + +
-+ + + + + + + + + + + + + + +
+__________________________
+_ _ _ _ Player 2, AP Specifics _ _ _ _
+__________________________
 
 AP has the most control during the game
 
@@ -82,17 +82,17 @@ Attack Specialists may have abilities like; being able to survive a single attac
 Board Specialists may have abilities like; removing a preparation or create new lanes in specific places.
 
 
-+ + + + + + + + + + + +
-+ + + + Visuals + + + +
-+ + + + + + + + + + + +
+__________________________
+_ _ _ _ Visuals _ _ _ _
+__________________________
 
 DP’s theme; American Wild west with hints of Fantasy races
 
 AP’s Theme; Mixture of Chinese Ming Dynasty and Mongolia, also with hints of fantasy races.
 
-+ + + + + + + + + + + + + +
-+ + + + Story Basics + + + +
-+ + + + + + + + + + + + + +
+__________________________
+_ _ _ _ Story Basics _ _ _ _
+__________________________
 
 In the three crowns setting there are three major kingdoms. In the history of the setting, one kingdom (The Huang Empire) launched an invasion to take over the world. After taking southern lands of its merchant neighbor nation by surprise, the invading empire found itself bottle necked by a stretch of impassible land. Forced to take the only safe road through this land, the marching army found itself at the town of Lonelywood. A town half way through the impassible lands and where a group of drifters in the merchant nation had gathered. Thirteen Gunmen of Demigod strength and Fortitude, wielding thirteen divine firearms, stood in the path of the empire. Why they did this, no one knows. As the Thirteen Gunmen served no nation and only ever used their powers to hunt those who did wrong. But still, they had prepared to hold the empire at this town of wood within a void of grass.
 
