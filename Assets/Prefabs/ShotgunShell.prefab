@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1714531687340155315}
   - component: {fileID: 1714531687340155316}
   - component: {fileID: 1714531687340155317}
+  - component: {fileID: 7942698870256813717}
   m_Layer: 0
   m_Name: ShotgunShell
   m_TagString: Untagged
@@ -99,7 +100,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.3
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -154,3 +155,15 @@ PolygonCollider2D:
       - {x: 0.38130188, y: -0.69600755}
       - {x: 0.30898732, y: -0.6682758}
       - {x: 0.2996496, y: -0.48}
+--- !u!114 &7942698870256813717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714531687340155318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b27c2698d034451aa872ea5de854e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

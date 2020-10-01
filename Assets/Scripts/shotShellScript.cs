@@ -10,14 +10,14 @@ public class shotShellScript : MonoBehaviour
     void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        print(screenBounds.y);
-        print("start");
+        //print(screenBounds.y);
+        //print("start");
     }
 
     // Update is called once per frame
     void Update()
     {
-        print(transform.position.y);
+        //print(transform.position.y);
         if(transform.position.y < -10)
         {
             print("destroyed");

@@ -17,7 +17,7 @@ public class ShotgunShellSpawner : MonoBehaviour
 
     private void spawn()
     {
-        print("spawn");
+        //print("spawn");
         GameObject s = Instantiate(shellPrefab) as GameObject;
         s.transform.position = new Vector2(Random.Range(-screenBounds.x, screenBounds.x), screenBounds.y * 2);
     }
