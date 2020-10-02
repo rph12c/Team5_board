@@ -4,25 +4,36 @@ using UnityEngine;
 
 public class shotShellScript : MonoBehaviour
 {
-
-    private Vector2 screenBounds;
-    // Start is called before the first frame update
-    void Start()
-    {
-        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        //print(screenBounds.y);
-        //print("start");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //print(transform.position.y);
-        if(transform.position.y < -10)
+        public AudioSource tickSource;
+        private Vector2 screenBounds;
+        // Start is called before the first frame update
+        void Start()
         {
-            print("destroyed");
-            Destroy(this.gameObject);
-            
+            tickSource = GetComponent<AudioSource>();
+            screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+            //print(screenBounds.y);
+            //print("start");
         }
+
+        // Update is called once per frame
+        void Update()
+        {
+            //print(transform.position.y);
+            if (transform.position.y < -10)
+            {
+                //print("destroyed");
+                Destroy(this.gameObject);
+
+            }
+        }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "mouse_body")
+        {
+            //print("bounced");
+            Keep_score.scoreValue += 1;
+            tickSource.Play();
+        }
+
     }
 }
