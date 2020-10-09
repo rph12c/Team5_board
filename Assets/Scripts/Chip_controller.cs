@@ -23,8 +23,10 @@ public class Chip_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (chip_state == 0)
         {
+            print("Chip state 0 entered into change state");
             changeState(IDLE);
         }
 
@@ -33,7 +35,7 @@ public class Chip_controller : MonoBehaviour
             changeState(SELECTED);
         }
 
-        if (chip_state == 0)
+        if (chip_state == 2)
         {
             changeState(MOVING);
         }
@@ -50,12 +52,13 @@ public class Chip_controller : MonoBehaviour
 
     void changeState(int state)
     {
-        if (currentAnimState == state) return;
+        //if (currentAnimState == state) return;
         print("switch state; state = " + state);
 
         switch (state)
         {
             case IDLE:
+                print("Idle State");
                 animator.SetInteger("toState", 0);
                 break;
             case SELECTED:
