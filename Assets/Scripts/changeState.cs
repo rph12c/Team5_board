@@ -15,4 +15,20 @@ public class changeState : MonoBehaviour
     {
         
     }
+
+    public void ButtonClicked()
+    {
+        Debug.Log("Button was clciked");
+        if (Chip_controller.chip_wound == 0)
+        {
+            Chip_controller.chip_wound = 1;
+            print("chip is now wounded");
+        }
+        else
+        {
+            Chip_controller.chip_wound = 0;
+            print("Chip is no longer wounded");
+        }
+
+    }
 }
