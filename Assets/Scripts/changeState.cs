@@ -16,7 +16,7 @@ public class changeState : MonoBehaviour
         
     }
 
-    public void ButtonClicked()
+    public void ButtonClickedWound()
     {
         Debug.Log("Button was clciked");
         if (Chip_controller.chip_wound == 0)
@@ -30,5 +30,21 @@ public class changeState : MonoBehaviour
             print("Chip is no longer wounded");
         }
 
+    }
+
+    public void ButtonClickedSelect()
+    {
+        Chip_controller.chip_state = 1;
+    }
+
+    public void ButtonClickedMove()
+    {
+        Chip_controller.chip_state = 2;
+    }
+
+    public void ButtonClickedDeselect()
+    {
+        print("Idle Button Pressed");
+        Chip_controller.chip_state = 0;
     }
 }
