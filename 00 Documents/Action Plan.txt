@@ -1,0 +1,50 @@
+STEP 01, Set up:
+Make key locations icons
+Make spaces for map
+Make blank stand in chips for units
+
+After this, the steps take two directions: Mechanics and testing, and programming.
+
+STEP 02a, mechanics:
+Mechanics and testing would mean making an initial rule set and then play testing it using the assets we've made.
+
+STEP 02b, UI:
+Design character cards
+Design character selection screen for defender
+Design trap selection and placement screen for defender
+Make the UI for he active game and have it provide all necissary info
+
+STEP 02c, Audio:
+We're going to need background music for the game as a whole
+It'd be nice to have music for each player that the game would switch between for each player turn.
+We're also going to need combat sound effects for when units attack
+Gunshot sound effects for gunmen abilities
+and sound effects for selecting chips or clicking buttons
+
+STEP 02d, Programming:
+The spaces need to be selectable and the provided unit should be able to move between spaces with the appropriet animations.
+	Suggestion: The player should select the unit, starting the animation. The player would then select a space. If not adjacent, either tell the player directly that this is not a valid spot, or make a noise telling the player. If adjacent, the spot should start emitting particles. On clicking again, the particles stop and the unit moves or attacks.
+
+We then also need the game to be able to tell what spaces are next to each other. For some of the gunmen, we may also need to know what spaces are near by, but are not connected via a lane line.
+
+
+
+
+
+UI:
+Character Selection
+    Cards to scroll through
+    Possibly have the cards on a table with a green mat on it (Business or poker table)
+Trap Selection
+    An Icon of a bear trap
+    An Icon of a wodden barakade
+    A Black transparent box that the traps can be gotten from.
+
+Character Cards
+    A tan papered card that conveys character info.
+    Possibly a version for the attacking player that conveys a unit's rule set.
+
+Name: The Foreman
+[Picture of foreman]
+Gun: German Lanz-Type Light Trench Mortar
+Ability: The Foreman can fire and attack units in adjacent spaces, even if there are no connecting lanes.
