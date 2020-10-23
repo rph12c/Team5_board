@@ -1,0 +1,53 @@
+Is the space in your game discrete or continuous? Please describe it. (10 pts)
+            Discrete. The player's units are restricted to connected spaces.
+
+How many dimensions does your space have? What are these dimensions?  (10 pts)
+            The game has two dimensions. One side of the board is connected to the other via a series of parallel and interconnected lanes. So there is the single dimension of spaces leading south to north, then a second demension connecting multiple first demensions.
+
+What are the boundaries of your space?  (10 pts)
+            The bounderderies of the play space consists of 1 demensional spaces that the player units are restricted to.
+
+How many verbs(Actions) do your players (characters) have? What are they?  (10 pts)
+            The players have 4 verbs. Moving units, using abilities, and attacking. The defending player has access to trap actions before the game, while the attacking player can use a 'call forth' ability to obtain specific troops.
+
+How many objects can each verb act on? What are these objects?  (10 pts)
+            Each verb by a unit can act on a single other object, be it a unit or board space. Trap verbs can act on multiple spaces at times.
+
+How many ways can players achieve their goals?  (10 pts)
+            Both players have mutliple ways to achieve their goal. These methods are inherintly variations of the same method; either carving a path across the board or preventing said path. The variation occures with the players chosing which path to take and which key buildings to capture or defend.
+
+How many subjects do the players control? What are these subjects?  (10 pts)
+            The defending player controls 14 subjects, while the attacking player controls an increasing amount. The defending subjects are the 13 gunman and the traps they set. The attacking subjects are the troops and specialists that will stream onto the board as the game progresses.
+
+How do side effects change constraints?  (10 pts)
+            For the defending player, keeping their own troops alive is just as important as preventing the attacking player from gaining ground. So at times, when threatened, the defending player's constraints might change to ensure the survival of the gunmen. The attacking player, instead, will find the side-effects of discovering traps to change how they react to the game.
+
+What are the operative actions in your game?  (10 pts)
+            
+
+What are the resultant actions in your game?  (10 pts)
+            
+
+What actions would you like your players to do that they cannot presently do? ***  (10 pts)
+            
+
+What is the ultimate goal of your game?  (10 pts)
+            
+
+Are there short and long-term goals and what are they?  (10 pts)
+            
+
+How do you plan to make the game goals known and understood by the player?  (10 pts)
+            
+
+What are the foundational rules of your game?  (10 pts)
+            
+
+How are these rules enforced?  (10 pts)
+            
+
+Does your game develop real skills? What are they?  (10 pts)
+            
+
+Does your game develop virtual skills? What are they?  (10 pts)
+            
