@@ -1,0 +1,102 @@
++ + + + + + + + Traps + + + + + + + +
+Blockades - Prevents movement onto a space
+	Countered by: Work Team
+	Cost: 4 Hours
+
+Fire Bomb - Damages units who step into space for 2 Turns
+	Countered by: Fire Brigade
+	Cost: 2 Hours
+
+Ground Bomb - Deletes All units on space and connecting spaces after 1 turn
+	Countered by: Defusal Team
+	Cost: 6 Hours
+
++ + + + + + + + Key Locations + + + + + + + +
+Town Records: Attacker gains one extra dice due to learning the town layout.
+
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
++-+-+-+-+-+-+-+ Defender +-+-+-+-+-+-+-+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
++ + + + + + + + Defending Player Rules + + + + + + + +
+
+The Player has x Hours to prepare before the game starts. [6 Hours]
+
+Each gunmen, if selected, can move, attack, and use an ability once per turn.
+
+Each gunmen also has X health. [3 Health]
+
+Gunman attack one space away.
+
++ + + + + + + + Gunmen and abilities + + + + + + + +
+1) The Captain
+	Ability:
+
+2) The Priestess
+	Ability:
+
+3) The Foreman
+	Ability: Can attack an adjacent space that has no direct lane connection
+
+4) The Cultist
+	Ability:
+
+5) The Ghost
+	Ability: Can move two spaces in a turn
+
+6) The Wanderer
+	Ability a: Can target a specific unit
+	Ability b: Can attack two spaces away
+
+7) The Cowboy
+	Ability:
+
+8) The Doctor
+	Ability:
+
+9) The Rebel
+	Ability:
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
++-+-+-+-+-+-+-+ Attacker +-+-+-+-+-+-+-+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
++ + + + + + + + Attacker General Unit Rules + + + + + + + +
+Once per turn, when selected: A unit can move by one space and attack the space they land on.
+
+All units have one health.
+
+Once per turn, attacking player draws X units from a deck and places them at the south entrance of town. [8]
+
+When a space is targeted by a gunmen, the attacker player choses which unit takes damage.
+
++ + + + + + + + Attack Specialists + + + + + + + +
+----Non-Combat Specialists----
+(Can be treated as a normal unit outside of their special ability)
+
+Demo-specialists: create lane between two adjacent spaces
+	Cost to Priority Draw:
+
+Work Team: Can spend a turn dismantaling blockades
+	Cost to Priority Draw:
+
+Fire Brigade: can put out fires
+	Cost to Priority Draw:
+
+Defusal Team: can disarm bombs.
+	Cost to Priority Draw:
+
+----Combat Specialists----
+Armored Team: has 2 health
+	Cost to Priority Draw:
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
++-+-+-+-+-+-+-+ General +-+-+-+-+-+-+-+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
++ + + + + + + + General Rules + + + + + + + +
+The game ends after X turns have passed, or the attacking player places a troop unit on the northern entrance to town. [to determine; should be more turns than it takes to make it from bottom to top along the outside route]
+
+Before a player's turn, a player roles 2 dice and can select that many units to activate that turn. (Due to reduced size of game, the defending player should have one five-sided dice)
+
