@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 220465780}
   - component: {fileID: 220465782}
   m_Layer: 0
-  m_Name: Main Menu Music
+  m_Name: MainMusic
   m_TagString: MainMusic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -680,7 +680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4996451466201135291, guid: ae9b749a66de1409e9ea5775979db883, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 45.199883
+      value: 45.199867
       objectReference: {fileID: 0}
     - target: {fileID: 4996451466201135291, guid: ae9b749a66de1409e9ea5775979db883, type: 3}
       propertyPath: m_SizeDelta.x
