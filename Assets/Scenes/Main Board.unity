@@ -211,6 +211,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 543879627}
+  - {fileID: 1270934679}
 --- !u!199 &139281827
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5105,6 +5108,10 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1441478158}
+  - {fileID: 1270934679}
+  - {fileID: 2013141322}
 --- !u!199 &147166686
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -9999,6 +10006,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1127978200}
+  - {fileID: 1911088199}
 --- !u!199 &164564814
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -14893,6 +14903,11 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 892158097}
+  - {fileID: 628563984}
+  - {fileID: 1295418993}
+  - {fileID: 953462261}
 --- !u!199 &171986013
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -19808,15 +19823,15 @@ Transform:
   - {fileID: 47928856}
   - {fileID: 1237913394}
   - {fileID: 1420572685}
-  - {fileID: 1195677698}
   - {fileID: 1080518471}
+  - {fileID: 1195677698}
   - {fileID: 1982881590}
   - {fileID: 935183779}
   - {fileID: 2059696853}
   - {fileID: 891788599}
   - {fileID: 508226284250736528}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &210798300
 GameObject:
@@ -19899,7 +19914,7 @@ Transform:
   m_LocalScale: {x: 0.4105448, y: 0.66936654, z: 0.8924887}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &274686999
 PrefabInstance:
@@ -20175,6 +20190,11 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1272669545}
+  - {fileID: 1109646611}
+  - {fileID: 139281825}
+  - {fileID: 1205147000}
 --- !u!199 &543879629
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -25069,6 +25089,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1517966204}
+  - {fileID: 1911088199}
 --- !u!199 &557360765
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -29963,6 +29986,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1431051613}
+  - {fileID: 628563984}
 --- !u!199 &594826822
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -34857,6 +34883,10 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 171986011}
+  - {fileID: 594826820}
+  - {fileID: 1855297568}
 --- !u!199 &628563986
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -39875,6 +39905,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1109646611}
+  - {fileID: 2013141322}
 --- !u!199 &753694572
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -44831,6 +44864,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1855297568}
+  - {fileID: 1439075291}
 --- !u!199 &764836408
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -49787,6 +49823,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1431051613}
+  - {fileID: 171986011}
 --- !u!199 &892158099
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -54867,6 +54906,10 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1314924750}
+  - {fileID: 1109646611}
+  - {fileID: 1272669545}
 --- !u!199 &946193551
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -59761,6 +59804,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 171986011}
+  - {fileID: 1500659906}
 --- !u!199 &953462263
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -64653,6 +64699,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1441478158}
+  - {fileID: 1270934679}
 --- !u!199 &981298892
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -69624,7 +69673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5083030618742113722, guid: abdc5004c7eae8c4ea3a9c74105352ec, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5083030618742113722, guid: abdc5004c7eae8c4ea3a9c74105352ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -69671,6 +69720,10 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 946193549}
+  - {fileID: 543879627}
+  - {fileID: 753694570}
 --- !u!199 &1109646613
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -74565,6 +74618,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1314924750}
+  - {fileID: 164564812}
 --- !u!199 &1127978202
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -79459,6 +79515,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1500659906}
+  - {fileID: 1439075291}
 --- !u!199 &1168109973
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -84368,7 +84427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5083030618742113722, guid: abdc5004c7eae8c4ea3a9c74105352ec, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 5083030618742113722, guid: abdc5004c7eae8c4ea3a9c74105352ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -84415,6 +84474,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 543879627}
+  - {fileID: 1270934679}
 --- !u!199 &1205147002
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -89369,6 +89431,11 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 981298890}
+  - {fileID: 147166684}
+  - {fileID: 139281825}
+  - {fileID: 1205147000}
 --- !u!199 &1270934681
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -94263,6 +94330,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 946193549}
+  - {fileID: 543879627}
 --- !u!199 &1272669547
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -99281,6 +99351,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 171986011}
+  - {fileID: 1500659906}
 --- !u!199 &1295418995
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -104299,6 +104372,10 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1431051613}
+  - {fileID: 1127978200}
+  - {fileID: 946193549}
 --- !u!199 &1314924752
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -109253,6 +109330,10 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 892158097}
+  - {fileID: 594826820}
+  - {fileID: 1314924750}
 --- !u!199 &1431051615
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -114147,6 +114228,10 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1168109971}
+  - {fileID: 764836406}
+  - {fileID: 1512776226}
 --- !u!199 &1439075293
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -119041,6 +119126,10 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1512776226}
+  - {fileID: 147166684}
+  - {fileID: 981298890}
 --- !u!199 &1441478160
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -123997,6 +124086,11 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 953462261}
+  - {fileID: 1295418993}
+  - {fileID: 1855297568}
+  - {fileID: 1168109971}
 --- !u!199 &1500659908
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -129015,6 +129109,10 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 1439075291}
+  - {fileID: 1517966204}
+  - {fileID: 1441478158}
 --- !u!199 &1512776228
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -133907,6 +134005,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 557360763}
+  - {fileID: 1512776226}
 --- !u!199 &1517966206
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -138807,7 +138908,7 @@ Transform:
   - {fileID: 394308410}
   - {fileID: 5111825613149468420}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1772094159
 PrefabInstance:
@@ -138871,6 +138972,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5083030618742113722, guid: abdc5004c7eae8c4ea3a9c74105352ec, type: 3}
   m_PrefabInstance: {fileID: 1772094159}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1824632496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1824632498}
+  - component: {fileID: 1824632497}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1824632497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824632496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7bc70e6e6754ba7b7434e11a4714a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameMode: 0
+  selectedSpace: {fileID: 0}
+  playerTurn: 0
+--- !u!4 &1824632498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824632496}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.165146, y: -1.1333663, z: -26.7535}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1855297568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3323648151648246024, guid: abdc5004c7eae8c4ea3a9c74105352ec, type: 3}
@@ -138897,6 +139044,10 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 628563984}
+  - {fileID: 1500659906}
+  - {fileID: 764836406}
 --- !u!199 &1855297570
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -143791,6 +143942,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 164564812}
+  - {fileID: 557360763}
 --- !u!199 &1911088201
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -148809,6 +148963,9 @@ MonoBehaviour:
   hoverColor:
     serializedVersion: 2
     rgba: 4286705351
+  adjacentTerritories:
+  - {fileID: 147166684}
+  - {fileID: 753694570}
 --- !u!199 &2013141324
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -153881,7 +154038,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &508226284250736527
 PrefabInstance:
