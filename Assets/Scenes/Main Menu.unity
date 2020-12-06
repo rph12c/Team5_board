@@ -854,7 +854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4996451466201135291, guid: ae9b749a66de1409e9ea5775979db883, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 58.199986
+      value: 58.19998
       objectReference: {fileID: 0}
     - target: {fileID: 4996451466201135291, guid: ae9b749a66de1409e9ea5775979db883, type: 3}
       propertyPath: m_SizeDelta.x
@@ -6657,7 +6657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4996451466201135284, guid: ae9b749a66de1409e9ea5775979db883, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: AnimationTestScene
+      value: 01 Main Board
       objectReference: {fileID: 0}
     - target: {fileID: 4996451466201135290, guid: ae9b749a66de1409e9ea5775979db883, type: 3}
       propertyPath: m_Name
