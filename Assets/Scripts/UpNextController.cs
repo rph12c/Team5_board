@@ -13,6 +13,10 @@ public class UpNextController : MonoBehaviour
     public Sprite barricadeSprt;
     public Sprite firebombSprt;
     public Sprite groundbombSprt;
+    public Sprite guardSprt;
+    public Sprite berserkerSprt;
+    public Sprite builderSprt;
+    public Sprite swordsmanSprt;
 
     void Start()
     {

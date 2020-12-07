@@ -676,11 +676,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4996451466201135291, guid: ae9b749a66de1409e9ea5775979db883, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.6642189
+      value: 0.6642151
       objectReference: {fileID: 0}
     - target: {fileID: 4996451466201135291, guid: ae9b749a66de1409e9ea5775979db883, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 45.199867
+      value: 45.19986
       objectReference: {fileID: 0}
     - target: {fileID: 4996451466201135291, guid: ae9b749a66de1409e9ea5775979db883, type: 3}
       propertyPath: m_SizeDelta.x
@@ -917,7 +917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4996451466201135291, guid: ae9b749a66de1409e9ea5775979db883, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.85097885
+      value: -0.85098267
       objectReference: {fileID: 0}
     - target: {fileID: 4996451466201135291, guid: ae9b749a66de1409e9ea5775979db883, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6693,7 +6693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4996451466201135284, guid: ae9b749a66de1409e9ea5775979db883, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 01 Main Board
+      value: Main Board
       objectReference: {fileID: 0}
     - target: {fileID: 4996451466201135284, guid: ae9b749a66de1409e9ea5775979db883, type: 3}
       propertyPath: m_Colors.m_PressedColor.r
