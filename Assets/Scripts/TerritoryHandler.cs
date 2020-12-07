@@ -14,6 +14,7 @@ public class TerritoryHandler : MonoBehaviour
     private GameObject populatedPiece;
     private GameObject populatedTrap;
     private TerritoryHolder populatorFaction;
+    
 
     public Color32 oldColor;
     public Color32 startColor;
@@ -156,10 +157,28 @@ public class TerritoryHandler : MonoBehaviour
                     controller.gameMode = GameMode.SelectTerritory;
                     sprite.color = oldColor;
                     particle.Stop();
+                } else
+                {
+                    print("test");
+                    print(populatorFaction);
+
+                    List<GameObject> list = new List<GameObject> { };
+                    list.AddRange(controller.selectedSpace.GetComponent<TerritoryHandler>().adjacentTerritories);
+                    if (list.Contains(this.gameObject)) //if clicked on currently adjacent spot
+                    {
+                        print("pressed");
+                        if (this.populatorFaction == TerritoryHolder.Neutral)
+                        {
+                            controller.movePiece(transform.position);
+                        }
+                    }
+
                 }
                 break;
         }
     }
+
+    //HELPER FUNCTIONS
 
     private void createPiecePrefab()
     {
@@ -170,13 +189,15 @@ public class TerritoryHandler : MonoBehaviour
         
         if (controller.playerTurn == PlayerTurn.Attack)
         {
+            print("111");
             populatorFaction = TerritoryHolder.Attack;
+            GamePieceController pieceControl = populatedPiece.GetComponent<GamePieceController>();
+            pieceControl.populateSlot(controller.getUpNext());
         } else
         {
             populatorFaction = TerritoryHolder.Defense;
-            print("111");
             GamePieceController pieceControl = populatedPiece.GetComponent<GamePieceController>();
-            pieceControl.populateSlot(controller.getDefenseTroopValue());
+            pieceControl.populateSlot(controller.getUpNext());
         }
     }
 
@@ -197,6 +218,16 @@ public class TerritoryHandler : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public TerritoryHolder getTerritoryHolder()
+    {
+        return populatorFaction;
+    }
+
+    public GameObject getPopulatedPiece()
+    {
+        return populatedPiece;
     }
 
     public void playParticle()
