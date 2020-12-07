@@ -35,6 +35,8 @@ public class GameController : MonoBehaviour
     private GameObject turnsLeftSign;
 
     private int turnsLeft;
+
+    public CharacterClassBase onBoardPiece;
     
 
     private bool defenseDidSetTraps = false;
@@ -89,6 +91,9 @@ public class GameController : MonoBehaviour
 
         defenseTroopPlacement = 0;
         defenseTrapPlacement = 0;
+        attackSpecialistNum = 0;
+        hasGuard = false;
+        hasBerserker = false;
 
     }
 
@@ -105,10 +110,21 @@ public class GameController : MonoBehaviour
 
     private bool isFinishedShowingSign = false;
     private bool finishedSetup = false;
+    private bool hasPickedNext = false;
 
     void Update()
     {
 
+        //HANDLE PIECE MOVING
+        if (isMovingPiece)
+        {
+            GameObject piece = this.selectedSpace.GetComponent<TerritoryHandler>().getPopulatedPiece();
+            piece.transform.position = Vector3.Lerp(piece.transform.position, newPiecePosition, Time.deltaTime * 4);
+        }
+
+        //END HANDLE PIECE MOVING
+
+        //HANDLE TURN SIGN
         switch (playerTurn)
         {
             case PlayerTurn.Attack:
@@ -130,13 +146,17 @@ public class GameController : MonoBehaviour
                 }
                 break;
         }
+        //END HANDLE TURN SIGN
 
         if (isFinishedShowingSign)
         {
             //SETUP
             if (action == Action.DefenseSetup)
             {
-                populateUpNext();
+                if (!hasPickedNext)
+                {
+                    populateUpNext();
+                }
                 nextUpSignPanel.SetActive(true);
                 //print("Defender, choose your five territories");
                 if (defensePlacement == DefensePlacement.Troop)
@@ -152,6 +172,7 @@ public class GameController : MonoBehaviour
                     if (defenseTrapPlacement == 3)
                     {
                         nextUpSignPanel.SetActive(false);
+                        hasPickedNext = false;
                         print("toAttack");
                         defensePlacement = DefensePlacement.Troop;
                         switchPlayer();
@@ -166,14 +187,21 @@ public class GameController : MonoBehaviour
             }
             if (action == Action.AttackSetup)
             {
+                if (!hasPickedNext)
+                {
+                    populateUpNext();
+                }
+                nextUpSignPanel.SetActive(true);
                 //print("Attacker, choose your one territory");
                 if (attackHasPlacedTroop)
                 {
+                    nextUpSignPanel.SetActive(false);
                     print("troop placed");
                     spawnSpace.stopParticle();
                     action = Action.SelectOwn;
+                    gameMode = GameMode.SelectTerritory;
                     finishedSetup = true;
-                    switchPlayer();
+                    //switchPlayer();
                     
                     
                 }
@@ -268,9 +296,9 @@ public class GameController : MonoBehaviour
     private int defenseTroopPlacement;
     public void incrementDefenseTroopPlacementCount()
     {
-        
+        hasPickedNext = false;
         defenseTroopPlacement += 1;
-        //print("troop++" + defenseTroopPlacement);
+                    
     }
 
     public int getDefenseTroopValue()
@@ -278,13 +306,18 @@ public class GameController : MonoBehaviour
         return defenseTroopPlacement;
     }
 
+
     private int defenseTrapPlacement;
     public void incrementDefenseTrapPlacementCount()
     {
-        
+        hasPickedNext = false;
         defenseTrapPlacement += 1;
         //print("trap++" + defenseTrapPlacement);
     }
+
+    private int attackSpecialistNum;
+    private bool hasGuard;
+    private bool hasBerserker;
 
     public int getTrapValue()
     {
@@ -295,56 +328,135 @@ public class GameController : MonoBehaviour
     public void setAttackPlacedTroop()
     {
         //print("set true");
+        hasPickedNext = false;
         attackHasPlacedTroop = true;
+    }
+
+    public CharacterClassBase getUpNext()
+    {
+        return onBoardPiece;
     }
 
     private void populateUpNext()
     {
+        hasPickedNext = true;
         UpNextController nextControl = nextUpSignSpriteObject.GetComponent<UpNextController>();
-        if (defenseTroopPlacement < 5)
-        {
-            
-            switch (defenseTroopPlacement)
-            {
-                case 0:
-                    nextPieceSprite.sprite = nextControl.cowboySprt;
-                    break;
-                case 1:
-                    nextPieceSprite.sprite = nextControl.ghostSprt;
-                    break;
-                case 2:
-                    nextPieceSprite.sprite = nextControl.priestessSprt;
-                    break;
-                case 3:
-                    nextPieceSprite.sprite = nextControl.rebelSprt;
-                    break;
-                case 4:
-                    nextPieceSprite.sprite = nextControl.wandererSprt;
-                    break;
-                default:
-                    break;
 
+        if (playerTurn == PlayerTurn.Defense)
+        {
+            if (defenseTroopPlacement < 5)
+            {
+
+                switch (defenseTroopPlacement)
+                {
+                    case 0:
+                        nextPieceSprite.sprite = nextControl.cowboySprt;
+                        onBoardPiece = new Cowboy();
+                        break;
+                    case 1:
+                        nextPieceSprite.sprite = nextControl.ghostSprt;
+                        onBoardPiece = new Ghost();
+                        break;
+                    case 2:
+                        nextPieceSprite.sprite = nextControl.priestessSprt;
+                        onBoardPiece = new Priestess();
+                        break;
+                    case 3:
+                        nextPieceSprite.sprite = nextControl.rebelSprt;
+                        onBoardPiece = new Rebel();
+                        break;
+                    case 4:
+                        nextPieceSprite.sprite = nextControl.wandererSprt;
+                        onBoardPiece = new Wanderer();
+                        break;
+                    default:
+                        break;
+
+                }
+            }
+            else
+            {
+                switch (defenseTrapPlacement)
+                {
+                    case 0:
+                        onBoardPiece = null;
+                        nextPieceSprite.sprite = nextControl.barricadeSprt;
+                        break;
+                    case 1:
+                        nextPieceSprite.sprite = nextControl.firebombSprt;
+                        break;
+                    case 2:
+                        nextPieceSprite.sprite = nextControl.groundbombSprt;
+                        break;
+                    case 3:
+                        nextUpSignPanel.SetActive(false);
+                        break;
+                    default:
+                        break;
+                }
             }
         } else
         {
-            switch (defenseTrapPlacement)
+            int rnd = (int)UnityEngine.Random.Range(0f, 15f);
+            if (attackSpecialistNum != 2 && rnd == 14)
             {
-                case 0:
-                    nextPieceSprite.sprite = nextControl.barricadeSprt;
-                    break;
-                case 1:
-                    nextPieceSprite.sprite = nextControl.firebombSprt;
-                    break;
-                case 2:
-                    nextPieceSprite.sprite = nextControl.groundbombSprt;
-                    break;
-                case 3:
-                    nextUpSignPanel.SetActive(false);
-                    break;
-                default:
-                    break;
+                if (hasGuard && !hasBerserker)
+                {
+                    nextPieceSprite.sprite = nextControl.berserkerSprt;
+                    onBoardPiece = new Berserker();
+                } else if (hasBerserker && !hasGuard)
+                {
+                    nextPieceSprite.sprite = nextControl.guardSprt;
+                    onBoardPiece = new Guard();
+                } else
+                {
+                    int specialRnd = (int)UnityEngine.Random.Range(0f, 2f);
+                    if (specialRnd == 0)
+                    {
+                        nextPieceSprite.sprite = nextControl.berserkerSprt;
+                        onBoardPiece = new Berserker();
+                    } else
+                    {
+                        nextPieceSprite.sprite = nextControl.guardSprt;
+                        onBoardPiece = new Guard();
+                    }
+                }
+            } else
+            {
+                if (rnd % 2 == 0)
+                {
+                    nextPieceSprite.sprite = nextControl.builderSprt;
+                    print("builder");
+                    onBoardPiece = new Builder();
+                } else
+                {
+                    nextPieceSprite.sprite = nextControl.swordsmanSprt;
+                    print("sword");
+                    onBoardPiece = new Swordsman();
+                }
             }
         }
+        
+        
+    }
+
+    private Vector3 newPiecePosition;
+    private bool isMovingPiece = false;
+    public void movePiece(Vector3 newPosition)
+    {
+        newPiecePosition = newPosition;
+        isMovingPiece = true;
+        Invoke("toggleIsMovingPiece", 1.5f);
+        //stopAdjacentParticles();
+
+    }
+
+    private void toggleIsMovingPiece()
+    {
+        isMovingPiece = false;
+        stopAdjacentParticles();
+        switchPlayer();
+        gameMode = GameMode.SelectTerritory;
     }
 
     
