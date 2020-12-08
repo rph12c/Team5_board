@@ -15090,10 +15090,10 @@ MonoBehaviour:
   barricadeSprt: {fileID: 21300000, guid: 5ee68292b68c548d88129b6556cf9984, type: 3}
   firebombSprt: {fileID: 21300000, guid: aabd14f749815434caf03b3f76c3f965, type: 3}
   groundbombSprt: {fileID: 21300000, guid: daf1442b96a894c149f09d12e13d658e, type: 3}
-  guardSprt: {fileID: 21300000, guid: 66577d3789c7f429faf3875ae46662cd, type: 3}
-  berserkerSprt: {fileID: 21300000, guid: 1a45f803d5643452c9ded589a63eed6e, type: 3}
-  builderSprt: {fileID: 21300000, guid: 02ba85b5a3e92460b813a4812169cc89, type: 3}
-  swordsmanSprt: {fileID: 21300000, guid: e66f8a566900844b484c0b673c6c2bd2, type: 3}
+  guardSprt: {fileID: 21300000, guid: 10da9e4d0cf924907a484a9f1b87daaa, type: 3}
+  berserkerSprt: {fileID: 21300000, guid: 22b6d6d67c8a34e1ab97c24d546b2f6a, type: 3}
+  builderSprt: {fileID: 21300000, guid: 87e2e13e3959b4433a849df04cd37a6a, type: 3}
+  swordsmanSprt: {fileID: 21300000, guid: 333a5038206bd4ed8a53c457e33d477f, type: 3}
 --- !u!1 &171986011 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3323648151648246024, guid: abdc5004c7eae8c4ea3a9c74105352ec, type: 3}

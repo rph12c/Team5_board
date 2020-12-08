@@ -496,7 +496,7 @@ public class GameController : MonoBehaviour
         stopAdjacentParticles();
 
         
-           switchPlayer();
+        switchPlayer();
         
         
         if (selectedSpace != null)
@@ -528,8 +528,15 @@ public class GameController : MonoBehaviour
         stopAdjacentParticles();
         GameObject instigator = instigatorSpace.GetComponent<TerritoryHandler>().populatedPiece;
         GameObject defender = defenderSpace.GetComponent<TerritoryHandler>().populatedPiece;
+
+        //print("inst: " + instigator.GetComponent<GamePieceController>().pieces);
+        //print("def: " + defender.GetComponent<GamePieceController>().pieces);
+
+        print("inst: " + instigator);
+        print("def: " + defender);
         CharacterClassBase[] instigatorPieces = instigator.GetComponent<GamePieceController>().pieces;
         CharacterClassBase[] defenderPieces = defender.GetComponent<GamePieceController>().pieces;
+
         bool didMove = false;
         if (defender.GetComponent<GamePieceController>().owner == PlayerTurn.Defense)
         {
@@ -544,6 +551,7 @@ public class GameController : MonoBehaviour
                 //instigator wins
                 defenderSpace.GetComponent<TerritoryHandler>().destroyPiece(false);
                 didMove = true;
+                defenderSpace.GetComponent<TerritoryHandler>().populatedPiece = selectedSpace.GetComponent<TerritoryHandler>().populatedPiece;
                 movePiece(defenderSpace.transform.position);
             }
             
@@ -553,6 +561,7 @@ public class GameController : MonoBehaviour
             //attacking player is defender in this case
             defenderSpace.GetComponent<TerritoryHandler>().destroyPiece(false);
             didMove = true;
+            defenderSpace.GetComponent<TerritoryHandler>().populatedPiece = selectedSpace.GetComponent<TerritoryHandler>().populatedPiece;
             movePiece(defenderSpace.transform.position);
         }
 

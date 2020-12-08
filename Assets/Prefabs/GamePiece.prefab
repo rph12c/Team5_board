@@ -271,10 +271,10 @@ MonoBehaviour:
   priestessSprt: {fileID: 21300000, guid: 334b60c843c80461896af89eb8226e4b, type: 3}
   rebelSprt: {fileID: 21300000, guid: e1315eafc4fb74ba0b68df23703e7585, type: 3}
   wandererSprt: {fileID: 21300000, guid: 0d40015cf9d194fa99935be536eac146, type: 3}
-  berserkerSprt: {fileID: 21300000, guid: 1a45f803d5643452c9ded589a63eed6e, type: 3}
-  guardSprt: {fileID: 21300000, guid: 66577d3789c7f429faf3875ae46662cd, type: 3}
-  builderSprt: {fileID: 21300000, guid: 02ba85b5a3e92460b813a4812169cc89, type: 3}
-  swordsmanSprt: {fileID: 21300000, guid: e66f8a566900844b484c0b673c6c2bd2, type: 3}
+  berserkerSprt: {fileID: 21300000, guid: 22b6d6d67c8a34e1ab97c24d546b2f6a, type: 3}
+  guardSprt: {fileID: 21300000, guid: 10da9e4d0cf924907a484a9f1b87daaa, type: 3}
+  builderSprt: {fileID: 21300000, guid: 87e2e13e3959b4433a849df04cd37a6a, type: 3}
+  swordsmanSprt: {fileID: 21300000, guid: 333a5038206bd4ed8a53c457e33d477f, type: 3}
   sprt0: {fileID: 21300000, guid: 5f7de5b67c5224e0ab62babd33d6ac2b, type: 3}
   sprt1: {fileID: 21300000, guid: e5311e5b2fa1144fab3a1eb029099ab3, type: 3}
   sprt2: {fileID: 21300000, guid: b42b092077c4b458293b8a903fa9d2e6, type: 3}
@@ -287,6 +287,7 @@ MonoBehaviour:
   sprt9: {fileID: 21300000, guid: 65677c5a68553475cb446b148548bc6a, type: 3}
   sprt10: {fileID: 21300000, guid: 38a6a9efcd9f14066820291e0f44efa1, type: 3}
   sprt10p: {fileID: 21300000, guid: b7a185467aeb2449996d0d915998cfd5, type: 3}
+  owner: 0
 --- !u!1 &257348201567343957
 GameObject:
   m_ObjectHideFlags: 0
