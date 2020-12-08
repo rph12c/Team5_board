@@ -32,13 +32,13 @@ public class GamePieceController : MonoBehaviour
 
     private int population;
 
-    private PlayerTurn owner;
+    public PlayerTurn owner;
     private GameController controller;
 
     private GameObject[] chipSprites = new GameObject[5];
     private GameObject[] slotNumbers = new GameObject[5];
 
-    private CharacterClassBase[] pieces = new CharacterClassBase[5]; //keeps track of what
+    public CharacterClassBase[] pieces = new CharacterClassBase[5]; //keeps track of what
     private int[] numInSlot = new int[] { 0, 0, 0, 0, 0 }; //keeps track of how many
 
     private void Awake()
@@ -82,16 +82,24 @@ public class GamePieceController : MonoBehaviour
         //print("222" + switchNum);
 
         int slot = population;
-
-        for(int i = 0; i < pieces.Length; i++)
+         
+        for (int i = 0; i < pieces.Length; i++)
         {
-            if (pieces[i] == piece)
+            if (pieces[i] != null)
             {
-                numInSlot[i] += 1;
-                print("return");
-                return;
+                print(i);
+                print(pieces[i].getName());
+                print(piece.getName());
+                if (pieces[i].getName() == piece.getName())
+                {
+                    numInSlot[i] += 1;
+                    print("return");
+                    return;
+                }
             }
+                
         }
+        
         print(population);
 
         pieces[slot] = piece;
@@ -124,15 +132,15 @@ public class GamePieceController : MonoBehaviour
                 chipSprites[slot].GetComponent<SpriteRenderer>().sprite = berserkerSprt;
                 break;
             case "Guard":
-                print("g");
+                //print("g");
                 chipSprites[slot].GetComponent<SpriteRenderer>().sprite = guardSprt;
                 break;
             case "Builder":
-                print("b");
+                //print("b");
                 chipSprites[slot].GetComponent<SpriteRenderer>().sprite = builderSprt;
                 break;
             case "Swordsman":
-                print("s");
+                //print("s");
                 chipSprites[slot].GetComponent<SpriteRenderer>().sprite = swordsmanSprt;
                 break;
             default:

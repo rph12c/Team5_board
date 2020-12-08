@@ -115,11 +115,14 @@ public class GameController : MonoBehaviour
     void Update()
     {
 
+        //print(playerTurn);
         //HANDLE PIECE MOVING
         if (isMovingPiece)
         {
             GameObject piece = this.selectedSpace.GetComponent<TerritoryHandler>().getPopulatedPiece();
-            piece.transform.position = Vector3.Lerp(piece.transform.position, newPiecePosition, Time.deltaTime * 4);
+            //print(selectedSpace);
+            //print(newPiecePosition);
+            piece.transform.position = Vector3.Lerp(piece.transform.position, new Vector3(newPiecePosition.x, newPiecePosition.y, piece.transform.position.z), Time.deltaTime * 4);
         }
 
         //END HANDLE PIECE MOVING
@@ -140,6 +143,12 @@ public class GameController : MonoBehaviour
                     if (finishedSetup)
                     {
                         turnsLeft--; //finished one whole turn
+
+                        if (turnsLeft == 0)
+                        {
+                            presentWinner(PlayerTurn.Defense);
+                        }
+
                         updateTurnsSign();
                     }
                     presentTurnSign(PlayerTurn.Defense);
@@ -200,6 +209,8 @@ public class GameController : MonoBehaviour
                     spawnSpace.stopParticle();
                     action = Action.SelectOwn;
                     gameMode = GameMode.SelectTerritory;
+                    hasPickedNext = false;
+                    attackHasPlacedTroop = false;
                     finishedSetup = true;
                     //switchPlayer();
                     
@@ -248,6 +259,7 @@ public class GameController : MonoBehaviour
         } else
         {
             playerTurn = PlayerTurn.Attack;
+            action = Action.AttackSetup; //to set more spaces
         }
         didShowPlayerTurnSign = false;
     }
@@ -258,7 +270,16 @@ public class GameController : MonoBehaviour
         isFinishedShowingSign = false;
         PlayerTurnSignController signControl = playerTurnSign.GetComponent<PlayerTurnSignController>();
         signControl.changeSign(player);
-        Invoke("signFinished", 8.0f);
+        Invoke("signFinished", 5.0f); //was 8
+    }
+
+    public void presentWinner(PlayerTurn player)
+    {
+        didShowPlayerTurnSign = true;
+        isFinishedShowingSign = false;
+        PlayerTurnSignController signControl = playerTurnSign.GetComponent<PlayerTurnSignController>();
+        signControl.displayWinner(player);
+        Invoke("signFinished", 5.0f); //was 8
     }
 
     private void signFinished()
@@ -284,12 +305,18 @@ public class GameController : MonoBehaviour
     {
         
         didStopParticles = true;
-        selectedSpace = null;
+
+        if (selectedSpace != null)
+        {
+            selectedSpace.GetComponent<TerritoryHandler>().stopParticle();
+        }
+      
         foreach (GameObject space in currentAdjSpaces) //stop all adjacent space particles
         {
             space.GetComponent<TerritoryHandler>().stopParticle();
         }
-        
+        //selectedSpace = null;
+
     }
 
 
@@ -451,12 +478,91 @@ public class GameController : MonoBehaviour
 
     }
 
+    public void hasMergedPieces(bool hitTrap = false)
+    {
+        if (hitTrap)
+        {
+            toggleAfterTrap();
+        } else
+        {
+            toggleIsMovingPiece();
+        }
+        
+    }
+
     private void toggleIsMovingPiece()
     {
         isMovingPiece = false;
         stopAdjacentParticles();
-        switchPlayer();
+
+        
+           switchPlayer();
+        
+        
+        if (selectedSpace != null)
+        {
+            selectedSpace.GetComponent<TerritoryHandler>().populatedPiece = null;
+            selectedSpace = null;
+        }
+        
         gameMode = GameMode.SelectTerritory;
+    }
+
+    private void toggleAfterTrap()
+    {
+        isMovingPiece = false;
+        stopAdjacentParticles();
+
+        if (selectedSpace != null)
+        {
+            selectedSpace.GetComponent<TerritoryHandler>().populatedPiece = null;
+            selectedSpace = null;
+        }
+
+        gameMode = GameMode.SelectTerritory;
+    }
+
+    public void conductFight(GameObject instigatorSpace, GameObject defenderSpace)
+    {
+        print("FIGHT!");
+        stopAdjacentParticles();
+        GameObject instigator = instigatorSpace.GetComponent<TerritoryHandler>().populatedPiece;
+        GameObject defender = defenderSpace.GetComponent<TerritoryHandler>().populatedPiece;
+        CharacterClassBase[] instigatorPieces = instigator.GetComponent<GamePieceController>().pieces;
+        CharacterClassBase[] defenderPieces = defender.GetComponent<GamePieceController>().pieces;
+        bool didMove = false;
+        if (defender.GetComponent<GamePieceController>().owner == PlayerTurn.Defense)
+        {
+
+            //defense player is defender in this case
+            if (defenderPieces[0].takeDamage(instigatorPieces[0].getStrength()))
+            {
+                //defender wins
+                instigatorSpace.GetComponent<TerritoryHandler>().destroyPiece(true);
+            } else
+            {
+                //instigator wins
+                defenderSpace.GetComponent<TerritoryHandler>().destroyPiece(false);
+                didMove = true;
+                movePiece(defenderSpace.transform.position);
+            }
+            
+        } else
+        {
+
+            //attacking player is defender in this case
+            defenderSpace.GetComponent<TerritoryHandler>().destroyPiece(false);
+            didMove = true;
+            movePiece(defenderSpace.transform.position);
+        }
+
+        if (!didMove)
+        {
+            switchPlayer();
+            gameMode = GameMode.SelectTerritory;
+        }
+        
+        
     }
 
     

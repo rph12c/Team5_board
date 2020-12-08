@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -5104,6 +5105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -10087,6 +10089,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defenseSprite: {fileID: 21300000, guid: fdd5d8061ad1743f38187d7799370ab1, type: 3}
   offenseSprite: {fileID: 21300000, guid: f6e05551957cd4499847616659313209, type: 3}
+  defenseWin: {fileID: 21300000, guid: 3023e7974ab4442649f411a1bb06a2ec, type: 3}
+  offenseWin: {fileID: 21300000, guid: 286688ba059234c90b69536dbba2f743, type: 3}
 --- !u!1 &164564812 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3323648151648246024, guid: abdc5004c7eae8c4ea3a9c74105352ec, type: 3}
@@ -10104,6 +10108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -15106,6 +15111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -20502,6 +20508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blank Space Key (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407906539687801224, guid: e10fccd5938360c4e87ebf2a22c98e1e, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 6234136293140704168, guid: e10fccd5938360c4e87ebf2a22c98e1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.357162
@@ -20570,6 +20580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -25474,6 +25485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -30376,6 +30388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -35278,6 +35291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -40381,6 +40395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -45345,6 +45360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -50309,6 +50325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -55397,6 +55414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -60300,6 +60318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -65200,6 +65219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -70226,6 +70246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -75129,6 +75150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -80184,6 +80206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -85148,6 +85171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -90110,6 +90134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -95014,6 +95039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -100040,6 +100066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -105066,6 +105093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -110029,6 +110057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -114932,6 +114961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -119835,6 +119865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -124800,6 +124831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -129907,6 +129939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -134808,6 +134841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -139930,6 +139964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -144833,6 +144868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
@@ -149960,6 +149996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deac32c4280f346c495d7dc0ee466512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  populatedPiece: {fileID: 0}
   oldColor:
     serializedVersion: 2
     rgba: 4289061102
