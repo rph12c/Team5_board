@@ -44,6 +44,8 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: ffae7c7763154479eb8ad5a99abbd65a
+    name: BoardMusic
   - guid: 2e8d78b2080e3487d817b5f11e2dbb96
     name: SFX
   - guid: 52dbbf22355804c4998d40458f7aa57c
@@ -147,7 +149,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: In-Game Music
+  m_Name: Board Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: ff219816a367a4f838a4fea1fc076d74
   m_Children: []

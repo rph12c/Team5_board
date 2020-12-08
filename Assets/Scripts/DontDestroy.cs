@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 public class DontDestroy : MonoBehaviour
 {
+    // void Awake()
+    //{
+    //GameObject[] objs = GameObject.FindGameObjectsWithTag("MainMusic");
 
-    void Awake()
-    {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("MainMusic");
-        if (objs.Length > 1)
-            Destroy(this.gameObject);
+    //if (objs.Length > 1)
+    //   Destroy(this.gameObject);
 
-        DontDestroyOnLoad(this.gameObject);
-    }
+    //DontDestroyOnLoad(this.gameObject);
+    //}
 }
 
