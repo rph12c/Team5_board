@@ -7,6 +7,7 @@ TagManager:
   - mouse_body
   - MainMusic
   - Canvas
+  - BoardMusic
   layers:
   - Default
   - TransparentFX
