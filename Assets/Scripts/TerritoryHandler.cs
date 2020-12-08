@@ -11,7 +11,7 @@ public class TerritoryHandler : MonoBehaviour
     private ParticleSystem particle;
     private GameController controller;
 
-    private GameObject populatedPiece;
+    public GameObject populatedPiece;
     private GameObject populatedTrap;
     private TerritoryHolder populatorFaction;
     
@@ -37,6 +37,7 @@ public class TerritoryHandler : MonoBehaviour
         particle.Stop();
         sprite.color = startColor;
     }
+
 
     void OnMouseEnter()
     {
@@ -106,9 +107,10 @@ public class TerritoryHandler : MonoBehaviour
             case GameMode.SelectTerritory:
 
                 //controller.switchPlayer(); //temp for testing
-
+                //print(controller.action);
                 if (controller.action == Action.SelectOwn) //If supposed to select own territory
                 {
+                    //print("assignSelected");
                     controller.selectedSpace = this.gameObject;
                     controller.gameMode = GameMode.SelectAdjacent;
                 } else //If supposed to place new troop on territory
@@ -160,16 +162,63 @@ public class TerritoryHandler : MonoBehaviour
                 } else
                 {
                     print("test");
-                    print(populatorFaction);
+                    //print(populatorFaction);
 
                     List<GameObject> list = new List<GameObject> { };
                     list.AddRange(controller.selectedSpace.GetComponent<TerritoryHandler>().adjacentTerritories);
                     if (list.Contains(this.gameObject)) //if clicked on currently adjacent spot
                     {
                         print("pressed");
-                        if (this.populatorFaction == TerritoryHolder.Neutral)
+                        if (this.populatorFaction == TerritoryHolder.Neutral) //if no one holds this spot.
                         {
+                            print("should not go");
                             controller.movePiece(transform.position);
+
+                            particle.Stop();
+                            populatedPiece = controller.selectedSpace.GetComponent<TerritoryHandler>().populatedPiece;
+                            print("faction " + controller.selectedSpace.GetComponent<TerritoryHandler>().populatorFaction);
+                            populatorFaction = controller.selectedSpace.GetComponent<TerritoryHandler>().populatorFaction;
+                            controller.selectedSpace.GetComponent<TerritoryHandler>().populatorFaction = TerritoryHolder.Neutral;
+
+                            if (controller.playerTurn == PlayerTurn.Attack && populatedTrap != null)
+                            {
+                                print("Trap!");
+                                Destroy(populatedTrap);
+                                destroyPiece(true);
+                                controller.hasMergedPieces(true); //not actually merged but does what we want;
+                            }
+
+                            if (this.gameObject == GameObject.FindGameObjectWithTag("Finish"))
+                            {
+                                controller.presentWinner(PlayerTurn.Attack);
+                            }
+
+                        } else
+                        {
+                            if (controller.playerTurn == PlayerTurn.Attack)
+                            {
+                                if (this.populatorFaction == TerritoryHolder.Defense)
+                                {
+                                    print("defense inst");
+                                    controller.conductFight(controller.selectedSpace, this.gameObject);
+
+                                } else //if their own spot
+                                {
+                                    mergePieces();
+                                }
+                                
+
+                            } else //if playerTurn is Defense
+                            {
+                                if (this.populatorFaction == TerritoryHolder.Attack)
+                                {
+                                    controller.conductFight(controller.selectedSpace, this.gameObject);
+                                }
+                                else //if their own spot
+                                {
+                                    mergePieces();
+                                }
+                            }
                         }
                     }
 
@@ -199,6 +248,27 @@ public class TerritoryHandler : MonoBehaviour
             GamePieceController pieceControl = populatedPiece.GetComponent<GamePieceController>();
             pieceControl.populateSlot(controller.getUpNext());
         }
+    }
+
+    private void mergePieces()
+    {
+        print("merge");
+        GamePieceController pieceControl = populatedPiece.GetComponent<GamePieceController>();
+        foreach (CharacterClassBase piece in controller.selectedSpace.GetComponent<TerritoryHandler>().populatedPiece.GetComponent<GamePieceController>().pieces)
+        {
+            if (piece != null)
+            {
+                pieceControl.populateSlot(piece);
+            } else
+            {
+                print("isNull");
+            }
+            
+        }
+        
+        controller.selectedSpace.GetComponent<TerritoryHandler>().destroyPiece(true);
+        controller.selectedSpace.GetComponent<TerritoryHandler>().populatorFaction = TerritoryHolder.Neutral;
+        controller.hasMergedPieces();
     }
 
     private void createTrapPrefab()
@@ -238,5 +308,27 @@ public class TerritoryHandler : MonoBehaviour
     public void stopParticle()
     {
         particle.Stop();
+    }
+
+    public void destroyPiece(bool isNeutral)
+    {
+        print("destroy");
+        Destroy(populatedPiece);
+        
+        populatedPiece = null;
+
+        if (isNeutral)
+        {
+            populatorFaction = TerritoryHolder.Neutral;
+        } else
+        {
+            if (populatorFaction == TerritoryHolder.Defense)
+            {
+                populatorFaction = TerritoryHolder.Attack;
+            } else
+            {
+                populatorFaction = TerritoryHolder.Defense;
+            }
+        }
     }
 }
