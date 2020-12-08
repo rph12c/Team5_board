@@ -6,7 +6,7 @@ public class MusicTransition : MonoBehaviour
 {
     private static MusicTransition instance;
 
-    private void Awake()
+    void Awake()
     {
         if(instance == null)
         {
